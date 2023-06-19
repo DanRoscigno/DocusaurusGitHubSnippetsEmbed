@@ -2,46 +2,32 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Embedding snippets of code from GitHub
 
-Let's discover **Docusaurus in less than 5 minutes**.
+This first block is a section of lines from a configuration file used in an integration
+test.  The URL used is to a particular commit for two reasons:
+- Line numbers can change, referring to a specific commit guarantees that the line numbers
+will stay correct.
+- At some point we may have versioned docs; this allows us to link to the docs at the appropriate point in time.
 
-## Getting Started
+The plan is to have dedicated tests for code that is included in the docs so that we know before the community when:
+- a change happens to a dataset that is used in the docs
+- a breaking change breaks a tutorial
 
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
+```xml reference title="/etc/clickhouse-server/users.d/allow-named-collections.xml"
+https://github.com/ClickHouse/ClickHouse/blob/fd5dd103b30aaee6d7a4e7ff56d88448bea6e2f6/tests/integration/test_async_insert_memory/configs/users.xml#L3-L9
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+This next block is the same content, but it is copied and pasted into the markdown page.  The
+rendered HTML is exactly the same except for the missing link to the full file.
 
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
+```xml title="/etc/clickhouse-server/users.d/allow-named-collections.xml"
+        <default>
+            <password></password>
+            <profile>default</profile>
+            <quota>default</quota>
+            <named_collection_control>1</named_collection_control>
+            <show_named_collections_secrets>1</show_named_collections_secrets>
+        </default>
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.

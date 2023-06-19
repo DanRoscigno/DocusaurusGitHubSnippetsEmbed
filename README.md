@@ -1,3 +1,26 @@
+# Adding GitHub based codeblocks
+
+```bash
+npx create-docusaurus@2.4.1 testDriven classic
+cd testDriven
+```
+
+```bash
+yarn add @saucelabs/theme-github-codeblock
+```
+
+## Modify `themes`
+
+Edit `docusaurus-config.json`.  If you do not have any existing `themes`, add a themes section just above `presets`
+
+```json
+  themes: ['@saucelabs/theme-github-codeblock'],
+```
+
+```bash
+yarn build
+```
+
 # Website
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
