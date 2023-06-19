@@ -32,6 +32,7 @@ const config = {
     locales: ['en'],
   },
 
+  themes: ['@saucelabs/theme-github-codeblock'],
   presets: [
     [
       'classic',
