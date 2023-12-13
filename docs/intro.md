@@ -14,20 +14,11 @@ The plan is to have dedicated tests for code that is included in the docs so tha
 - a change happens to a dataset that is used in the docs
 - a breaking change breaks a tutorial
 
-```xml reference title="/etc/clickhouse-server/users.d/allow-named-collections.xml"
-https://github.com/ClickHouse/ClickHouse/blob/fd5dd103b30aaee6d7a4e7ff56d88448bea6e2f6/tests/integration/test_async_insert_memory/configs/users.xml#L3-L9
+```bash reference title="be.conf"
+https://github.com/StarRocks/starrocks/blob/bed907747e07cd529a3b11e372997a14fd03436e/conf/be.conf#L21-L26
 ```
 
-This next block is the same content, but it is copied and pasted into the markdown page.  The
-rendered HTML is exactly the same except for the missing link to the full file.
-
-```xml title="/etc/clickhouse-server/users.d/allow-named-collections.xml"
-        <default>
-            <password></password>
-            <profile>default</profile>
-            <quota>default</quota>
-            <named_collection_control>1</named_collection_control>
-            <show_named_collections_secrets>1</show_named_collections_secrets>
-        </default>
+```sql reference title="JOIN from Quick Start"
+https://github.com/StarRocks/starrocks/blob/878ed8ae56ded2324c90f52c5ea99e2d2abcb51a/docs/en/assets/quick-start/_SQL.mdx#L136-L147
 ```
 
